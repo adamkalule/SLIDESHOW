@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>adamspage.com</title>
+        <link rel="stylesheet"href="css/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1">
+    </head>
+    <body>
+        
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="#"style="color:white;text-decoration:none;">HOME</a> <a href="#"style="color:white;text-decoration:none;">BAND</a> <a href="#"style="color:white;text-decoration:none;">TOUR</a> <a href="#"style="color:white;text-decoration:none;">CONTACT</a>
+        </nav>
+        
+        <!-- Slideshow -->
+        <section>
+            <img class="mySlides"src="images/adam%20(1).jpg"style="width:1000px;height:600px;">
+            <img class="mySlides"src="images/adam%20(2).jpg"style="width:1000px;height:600px;">
+            <img class="mySlides"src="images/adam%20(3).jpg"style="width:1000px;height:600px;">
+        </section>
+        
+        <script>
+            // Automatic Slideshow - change image every 3 seconds
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++)
+                    {
+                        x[i].style.display = "none";
+                    }
+                myIndex++;
+                if (myIndex > x.length)
+                    {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel, 3000);
+            }
+        </script>
+    </body>
+</html>
